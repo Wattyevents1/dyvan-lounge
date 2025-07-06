@@ -1,3 +1,9 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -31,4 +37,33 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+/* Ensure content takes full height */
+main {
+    flex: 1;
+}
+
+/* Improve responsive behavior */
+@media (max-width: 768px) {
+    .App {
+        font-size: 14px;
+    }
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Improve button hover effects */
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effects */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
